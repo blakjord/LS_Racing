@@ -1,0 +1,40 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/NAS/Blai/UNI/2n/Semestre 2/prog/LS_Racing/LS_allegro.c
+LS_allegro.h
+C:/NAS/Blai/UNI/2n/Semestre 2/prog/LS_Racing/LS_allegro.h
+
+C:/NAS/Blai/UNI/2n/Semestre 2/prog/LS_Racing/LS_allegro.h
+stdarg.h
+-
+stdio.h
+-
+stdlib.h
+-
+unistd.h
+-
+string.h
+-
+pthread.h
+-
+allegro5/allegro.h
+C:/NAS/Blai/UNI/2n/Semestre 2/prog/LS_Racing/allegro5/allegro.h
+allegro5/allegro_primitives.h
+C:/NAS/Blai/UNI/2n/Semestre 2/prog/LS_Racing/allegro5/allegro_primitives.h
+allegro5/allegro_font.h
+C:/NAS/Blai/UNI/2n/Semestre 2/prog/LS_Racing/allegro5/allegro_font.h
+allegro5/allegro_ttf.h
+C:/NAS/Blai/UNI/2n/Semestre 2/prog/LS_Racing/allegro5/allegro_ttf.h
+
+C:/NAS/Blai/UNI/2n/Semestre 2/prog/LS_Racing/main.c
+stdio.h
+-
+LS_allegro.h
+C:/NAS/Blai/UNI/2n/Semestre 2/prog/LS_Racing/LS_allegro.h
+

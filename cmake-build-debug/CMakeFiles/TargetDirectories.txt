@@ -1,0 +1,3 @@
+C:/NAS/Blai/UNI/2n/Semestre 2/prog/LS_Racing/cmake-build-debug/CMakeFiles/LS_Racing.dir
+C:/NAS/Blai/UNI/2n/Semestre 2/prog/LS_Racing/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/NAS/Blai/UNI/2n/Semestre 2/prog/LS_Racing/cmake-build-debug/CMakeFiles/rebuild_cache.dir
