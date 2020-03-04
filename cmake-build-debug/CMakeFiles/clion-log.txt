@@ -1,11 +1,4 @@
-"C:\Program Files\JetBrains\CLion 2019.3.4\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" "C:\NAS\Blai\UNI\2n\Semestre 2\prog\LS_Racing"
--- The C compiler identification is GNU 8.2.0
--- Check for working C compiler: C:/MinGW/bin/gcc.exe
--- Check for working C compiler: C:/MinGW/bin/gcc.exe -- works
--- Detecting C compiler ABI info
--- Detecting C compiler ABI info - done
--- Detecting C compile features
--- Detecting C compile features - done
+"C:\Program Files\JetBrains\CLion 2019.3.4\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" C:\Users\Alejandro\CLionProjects\LS_Racing
 -- Configuring done
 -- Generating done
--- Build files have been written to: C:/NAS/Blai/UNI/2n/Semestre 2/prog/LS_Racing/cmake-build-debug
+-- Build files have been written to: C:/Users/Alejandro/CLionProjects/LS_Racing/cmake-build-debug

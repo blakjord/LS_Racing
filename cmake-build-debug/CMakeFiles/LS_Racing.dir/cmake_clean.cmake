@@ -1,5 +1,9 @@
 file(REMOVE_RECURSE
   "CMakeFiles/LS_Racing.dir/LS_allegro.c.obj"
+  "CMakeFiles/LS_Racing.dir/carrera.c.obj"
+  "CMakeFiles/LS_Racing.dir/clasificacion.c.obj"
+  "CMakeFiles/LS_Racing.dir/configuracion.c.obj"
+  "CMakeFiles/LS_Racing.dir/lectura.c.obj"
   "CMakeFiles/LS_Racing.dir/main.c.obj"
   "LS_Racing.exe"
   "LS_Racing.exe.manifest"

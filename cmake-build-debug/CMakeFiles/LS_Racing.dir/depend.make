@@ -4,6 +4,19 @@
 CMakeFiles/LS_Racing.dir/LS_allegro.c.obj: ../LS_allegro.c
 CMakeFiles/LS_Racing.dir/LS_allegro.c.obj: ../LS_allegro.h
 
+CMakeFiles/LS_Racing.dir/carrera.c.obj: ../carrera.c
+CMakeFiles/LS_Racing.dir/carrera.c.obj: ../carrera.h
+
+CMakeFiles/LS_Racing.dir/clasificacion.c.obj: ../clasificacion.c
+CMakeFiles/LS_Racing.dir/clasificacion.c.obj: ../clasificacion.h
+
+CMakeFiles/LS_Racing.dir/configuracion.c.obj: ../configuracion.c
+CMakeFiles/LS_Racing.dir/configuracion.c.obj: ../configuracion.h
+
+CMakeFiles/LS_Racing.dir/lectura.c.obj: ../lectura.c
+CMakeFiles/LS_Racing.dir/lectura.c.obj: ../lectura.h
+
 CMakeFiles/LS_Racing.dir/main.c.obj: ../LS_allegro.h
+CMakeFiles/LS_Racing.dir/main.c.obj: ../lectura.h
 CMakeFiles/LS_Racing.dir/main.c.obj: ../main.c
 

@@ -47,10 +47,10 @@ RM = "C:\Program Files\JetBrains\CLion 2019.3.4\bin\cmake\win\bin\cmake.exe" -E 
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "C:\NAS\Blai\UNI\2n\Semestre 2\prog\LS_Racing"
+CMAKE_SOURCE_DIR = C:\Users\Alejandro\CLionProjects\LS_Racing
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "C:\NAS\Blai\UNI\2n\Semestre 2\prog\LS_Racing\cmake-build-debug"
+CMAKE_BINARY_DIR = C:\Users\Alejandro\CLionProjects\LS_Racing\cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -79,9 +79,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\NAS\Blai\UNI\2n\Semestre 2\prog\LS_Racing\cmake-build-debug\CMakeFiles" "C:\NAS\Blai\UNI\2n\Semestre 2\prog\LS_Racing\cmake-build-debug\CMakeFiles\progress.marks"
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Alejandro\CLionProjects\LS_Racing\cmake-build-debug\CMakeFiles C:\Users\Alejandro\CLionProjects\LS_Racing\cmake-build-debug\CMakeFiles\progress.marks
 	$(MAKE) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\NAS\Blai\UNI\2n\Semestre 2\prog\LS_Racing\cmake-build-debug\CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Alejandro\CLionProjects\LS_Racing\cmake-build-debug\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -149,6 +149,114 @@ LS_allegro.c.s:
 	$(MAKE) -f CMakeFiles\LS_Racing.dir\build.make CMakeFiles/LS_Racing.dir/LS_allegro.c.s
 .PHONY : LS_allegro.c.s
 
+carrera.obj: carrera.c.obj
+
+.PHONY : carrera.obj
+
+# target to build an object file
+carrera.c.obj:
+	$(MAKE) -f CMakeFiles\LS_Racing.dir\build.make CMakeFiles/LS_Racing.dir/carrera.c.obj
+.PHONY : carrera.c.obj
+
+carrera.i: carrera.c.i
+
+.PHONY : carrera.i
+
+# target to preprocess a source file
+carrera.c.i:
+	$(MAKE) -f CMakeFiles\LS_Racing.dir\build.make CMakeFiles/LS_Racing.dir/carrera.c.i
+.PHONY : carrera.c.i
+
+carrera.s: carrera.c.s
+
+.PHONY : carrera.s
+
+# target to generate assembly for a file
+carrera.c.s:
+	$(MAKE) -f CMakeFiles\LS_Racing.dir\build.make CMakeFiles/LS_Racing.dir/carrera.c.s
+.PHONY : carrera.c.s
+
+clasificacion.obj: clasificacion.c.obj
+
+.PHONY : clasificacion.obj
+
+# target to build an object file
+clasificacion.c.obj:
+	$(MAKE) -f CMakeFiles\LS_Racing.dir\build.make CMakeFiles/LS_Racing.dir/clasificacion.c.obj
+.PHONY : clasificacion.c.obj
+
+clasificacion.i: clasificacion.c.i
+
+.PHONY : clasificacion.i
+
+# target to preprocess a source file
+clasificacion.c.i:
+	$(MAKE) -f CMakeFiles\LS_Racing.dir\build.make CMakeFiles/LS_Racing.dir/clasificacion.c.i
+.PHONY : clasificacion.c.i
+
+clasificacion.s: clasificacion.c.s
+
+.PHONY : clasificacion.s
+
+# target to generate assembly for a file
+clasificacion.c.s:
+	$(MAKE) -f CMakeFiles\LS_Racing.dir\build.make CMakeFiles/LS_Racing.dir/clasificacion.c.s
+.PHONY : clasificacion.c.s
+
+configuracion.obj: configuracion.c.obj
+
+.PHONY : configuracion.obj
+
+# target to build an object file
+configuracion.c.obj:
+	$(MAKE) -f CMakeFiles\LS_Racing.dir\build.make CMakeFiles/LS_Racing.dir/configuracion.c.obj
+.PHONY : configuracion.c.obj
+
+configuracion.i: configuracion.c.i
+
+.PHONY : configuracion.i
+
+# target to preprocess a source file
+configuracion.c.i:
+	$(MAKE) -f CMakeFiles\LS_Racing.dir\build.make CMakeFiles/LS_Racing.dir/configuracion.c.i
+.PHONY : configuracion.c.i
+
+configuracion.s: configuracion.c.s
+
+.PHONY : configuracion.s
+
+# target to generate assembly for a file
+configuracion.c.s:
+	$(MAKE) -f CMakeFiles\LS_Racing.dir\build.make CMakeFiles/LS_Racing.dir/configuracion.c.s
+.PHONY : configuracion.c.s
+
+lectura.obj: lectura.c.obj
+
+.PHONY : lectura.obj
+
+# target to build an object file
+lectura.c.obj:
+	$(MAKE) -f CMakeFiles\LS_Racing.dir\build.make CMakeFiles/LS_Racing.dir/lectura.c.obj
+.PHONY : lectura.c.obj
+
+lectura.i: lectura.c.i
+
+.PHONY : lectura.i
+
+# target to preprocess a source file
+lectura.c.i:
+	$(MAKE) -f CMakeFiles\LS_Racing.dir\build.make CMakeFiles/LS_Racing.dir/lectura.c.i
+.PHONY : lectura.c.i
+
+lectura.s: lectura.c.s
+
+.PHONY : lectura.s
+
+# target to generate assembly for a file
+lectura.c.s:
+	$(MAKE) -f CMakeFiles\LS_Racing.dir\build.make CMakeFiles/LS_Racing.dir/lectura.c.s
+.PHONY : lectura.c.s
+
 main.obj: main.c.obj
 
 .PHONY : main.obj
@@ -188,6 +296,18 @@ help:
 	@echo ... LS_allegro.obj
 	@echo ... LS_allegro.i
 	@echo ... LS_allegro.s
+	@echo ... carrera.obj
+	@echo ... carrera.i
+	@echo ... carrera.s
+	@echo ... clasificacion.obj
+	@echo ... clasificacion.i
+	@echo ... clasificacion.s
+	@echo ... configuracion.obj
+	@echo ... configuracion.i
+	@echo ... configuracion.s
+	@echo ... lectura.obj
+	@echo ... lectura.i
+	@echo ... lectura.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

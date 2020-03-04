@@ -1,4 +1,4 @@
-# Install script for directory: C:/NAS/Blai/UNI/2n/Semestre 2/prog/LS_Racing
+# Install script for directory: C:/Users/Alejandro/CLionProjects/LS_Racing
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/NAS/Blai/UNI/2n/Semestre 2/prog/LS_Racing/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/Users/Alejandro/CLionProjects/LS_Racing/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

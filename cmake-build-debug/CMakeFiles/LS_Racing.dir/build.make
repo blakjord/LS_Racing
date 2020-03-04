@@ -42,10 +42,10 @@ RM = "C:\Program Files\JetBrains\CLion 2019.3.4\bin\cmake\win\bin\cmake.exe" -E 
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "C:\NAS\Blai\UNI\2n\Semestre 2\prog\LS_Racing"
+CMAKE_SOURCE_DIR = C:\Users\Alejandro\CLionProjects\LS_Racing
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "C:\NAS\Blai\UNI\2n\Semestre 2\prog\LS_Racing\cmake-build-debug"
+CMAKE_BINARY_DIR = C:\Users\Alejandro\CLionProjects\LS_Racing\cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/LS_Racing.dir/depend.make
@@ -59,46 +59,110 @@ include CMakeFiles/LS_Racing.dir/flags.make
 CMakeFiles/LS_Racing.dir/main.c.obj: CMakeFiles/LS_Racing.dir/flags.make
 CMakeFiles/LS_Racing.dir/main.c.obj: CMakeFiles/LS_Racing.dir/includes_C.rsp
 CMakeFiles/LS_Racing.dir/main.c.obj: ../main.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\NAS\Blai\UNI\2n\Semestre 2\prog\LS_Racing\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/LS_Racing.dir/main.c.obj"
-	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\LS_Racing.dir\main.c.obj   -c "C:\NAS\Blai\UNI\2n\Semestre 2\prog\LS_Racing\main.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Alejandro\CLionProjects\LS_Racing\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/LS_Racing.dir/main.c.obj"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\LS_Racing.dir\main.c.obj   -c C:\Users\Alejandro\CLionProjects\LS_Racing\main.c
 
 CMakeFiles/LS_Racing.dir/main.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/LS_Racing.dir/main.c.i"
-	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "C:\NAS\Blai\UNI\2n\Semestre 2\prog\LS_Racing\main.c" > CMakeFiles\LS_Racing.dir\main.c.i
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\Alejandro\CLionProjects\LS_Racing\main.c > CMakeFiles\LS_Racing.dir\main.c.i
 
 CMakeFiles/LS_Racing.dir/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/LS_Racing.dir/main.c.s"
-	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "C:\NAS\Blai\UNI\2n\Semestre 2\prog\LS_Racing\main.c" -o CMakeFiles\LS_Racing.dir\main.c.s
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\Alejandro\CLionProjects\LS_Racing\main.c -o CMakeFiles\LS_Racing.dir\main.c.s
 
 CMakeFiles/LS_Racing.dir/LS_allegro.c.obj: CMakeFiles/LS_Racing.dir/flags.make
 CMakeFiles/LS_Racing.dir/LS_allegro.c.obj: CMakeFiles/LS_Racing.dir/includes_C.rsp
 CMakeFiles/LS_Racing.dir/LS_allegro.c.obj: ../LS_allegro.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\NAS\Blai\UNI\2n\Semestre 2\prog\LS_Racing\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/LS_Racing.dir/LS_allegro.c.obj"
-	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\LS_Racing.dir\LS_allegro.c.obj   -c "C:\NAS\Blai\UNI\2n\Semestre 2\prog\LS_Racing\LS_allegro.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Alejandro\CLionProjects\LS_Racing\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/LS_Racing.dir/LS_allegro.c.obj"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\LS_Racing.dir\LS_allegro.c.obj   -c C:\Users\Alejandro\CLionProjects\LS_Racing\LS_allegro.c
 
 CMakeFiles/LS_Racing.dir/LS_allegro.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/LS_Racing.dir/LS_allegro.c.i"
-	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "C:\NAS\Blai\UNI\2n\Semestre 2\prog\LS_Racing\LS_allegro.c" > CMakeFiles\LS_Racing.dir\LS_allegro.c.i
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\Alejandro\CLionProjects\LS_Racing\LS_allegro.c > CMakeFiles\LS_Racing.dir\LS_allegro.c.i
 
 CMakeFiles/LS_Racing.dir/LS_allegro.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/LS_Racing.dir/LS_allegro.c.s"
-	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "C:\NAS\Blai\UNI\2n\Semestre 2\prog\LS_Racing\LS_allegro.c" -o CMakeFiles\LS_Racing.dir\LS_allegro.c.s
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\Alejandro\CLionProjects\LS_Racing\LS_allegro.c -o CMakeFiles\LS_Racing.dir\LS_allegro.c.s
+
+CMakeFiles/LS_Racing.dir/lectura.c.obj: CMakeFiles/LS_Racing.dir/flags.make
+CMakeFiles/LS_Racing.dir/lectura.c.obj: CMakeFiles/LS_Racing.dir/includes_C.rsp
+CMakeFiles/LS_Racing.dir/lectura.c.obj: ../lectura.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Alejandro\CLionProjects\LS_Racing\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/LS_Racing.dir/lectura.c.obj"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\LS_Racing.dir\lectura.c.obj   -c C:\Users\Alejandro\CLionProjects\LS_Racing\lectura.c
+
+CMakeFiles/LS_Racing.dir/lectura.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/LS_Racing.dir/lectura.c.i"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\Alejandro\CLionProjects\LS_Racing\lectura.c > CMakeFiles\LS_Racing.dir\lectura.c.i
+
+CMakeFiles/LS_Racing.dir/lectura.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/LS_Racing.dir/lectura.c.s"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\Alejandro\CLionProjects\LS_Racing\lectura.c -o CMakeFiles\LS_Racing.dir\lectura.c.s
+
+CMakeFiles/LS_Racing.dir/configuracion.c.obj: CMakeFiles/LS_Racing.dir/flags.make
+CMakeFiles/LS_Racing.dir/configuracion.c.obj: CMakeFiles/LS_Racing.dir/includes_C.rsp
+CMakeFiles/LS_Racing.dir/configuracion.c.obj: ../configuracion.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Alejandro\CLionProjects\LS_Racing\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/LS_Racing.dir/configuracion.c.obj"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\LS_Racing.dir\configuracion.c.obj   -c C:\Users\Alejandro\CLionProjects\LS_Racing\configuracion.c
+
+CMakeFiles/LS_Racing.dir/configuracion.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/LS_Racing.dir/configuracion.c.i"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\Alejandro\CLionProjects\LS_Racing\configuracion.c > CMakeFiles\LS_Racing.dir\configuracion.c.i
+
+CMakeFiles/LS_Racing.dir/configuracion.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/LS_Racing.dir/configuracion.c.s"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\Alejandro\CLionProjects\LS_Racing\configuracion.c -o CMakeFiles\LS_Racing.dir\configuracion.c.s
+
+CMakeFiles/LS_Racing.dir/carrera.c.obj: CMakeFiles/LS_Racing.dir/flags.make
+CMakeFiles/LS_Racing.dir/carrera.c.obj: CMakeFiles/LS_Racing.dir/includes_C.rsp
+CMakeFiles/LS_Racing.dir/carrera.c.obj: ../carrera.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Alejandro\CLionProjects\LS_Racing\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/LS_Racing.dir/carrera.c.obj"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\LS_Racing.dir\carrera.c.obj   -c C:\Users\Alejandro\CLionProjects\LS_Racing\carrera.c
+
+CMakeFiles/LS_Racing.dir/carrera.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/LS_Racing.dir/carrera.c.i"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\Alejandro\CLionProjects\LS_Racing\carrera.c > CMakeFiles\LS_Racing.dir\carrera.c.i
+
+CMakeFiles/LS_Racing.dir/carrera.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/LS_Racing.dir/carrera.c.s"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\Alejandro\CLionProjects\LS_Racing\carrera.c -o CMakeFiles\LS_Racing.dir\carrera.c.s
+
+CMakeFiles/LS_Racing.dir/clasificacion.c.obj: CMakeFiles/LS_Racing.dir/flags.make
+CMakeFiles/LS_Racing.dir/clasificacion.c.obj: CMakeFiles/LS_Racing.dir/includes_C.rsp
+CMakeFiles/LS_Racing.dir/clasificacion.c.obj: ../clasificacion.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Alejandro\CLionProjects\LS_Racing\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/LS_Racing.dir/clasificacion.c.obj"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\LS_Racing.dir\clasificacion.c.obj   -c C:\Users\Alejandro\CLionProjects\LS_Racing\clasificacion.c
+
+CMakeFiles/LS_Racing.dir/clasificacion.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/LS_Racing.dir/clasificacion.c.i"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\Alejandro\CLionProjects\LS_Racing\clasificacion.c > CMakeFiles\LS_Racing.dir\clasificacion.c.i
+
+CMakeFiles/LS_Racing.dir/clasificacion.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/LS_Racing.dir/clasificacion.c.s"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\Alejandro\CLionProjects\LS_Racing\clasificacion.c -o CMakeFiles\LS_Racing.dir\clasificacion.c.s
 
 # Object files for target LS_Racing
 LS_Racing_OBJECTS = \
 "CMakeFiles/LS_Racing.dir/main.c.obj" \
-"CMakeFiles/LS_Racing.dir/LS_allegro.c.obj"
+"CMakeFiles/LS_Racing.dir/LS_allegro.c.obj" \
+"CMakeFiles/LS_Racing.dir/lectura.c.obj" \
+"CMakeFiles/LS_Racing.dir/configuracion.c.obj" \
+"CMakeFiles/LS_Racing.dir/carrera.c.obj" \
+"CMakeFiles/LS_Racing.dir/clasificacion.c.obj"
 
 # External object files for target LS_Racing
 LS_Racing_EXTERNAL_OBJECTS =
 
 LS_Racing.exe: CMakeFiles/LS_Racing.dir/main.c.obj
 LS_Racing.exe: CMakeFiles/LS_Racing.dir/LS_allegro.c.obj
+LS_Racing.exe: CMakeFiles/LS_Racing.dir/lectura.c.obj
+LS_Racing.exe: CMakeFiles/LS_Racing.dir/configuracion.c.obj
+LS_Racing.exe: CMakeFiles/LS_Racing.dir/carrera.c.obj
+LS_Racing.exe: CMakeFiles/LS_Racing.dir/clasificacion.c.obj
 LS_Racing.exe: CMakeFiles/LS_Racing.dir/build.make
 LS_Racing.exe: CMakeFiles/LS_Racing.dir/linklibs.rsp
 LS_Racing.exe: CMakeFiles/LS_Racing.dir/objects1.rsp
 LS_Racing.exe: CMakeFiles/LS_Racing.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\NAS\Blai\UNI\2n\Semestre 2\prog\LS_Racing\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Linking C executable LS_Racing.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\Alejandro\CLionProjects\LS_Racing\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking C executable LS_Racing.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\LS_Racing.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -111,6 +175,6 @@ CMakeFiles/LS_Racing.dir/clean:
 .PHONY : CMakeFiles/LS_Racing.dir/clean
 
 CMakeFiles/LS_Racing.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" "C:\NAS\Blai\UNI\2n\Semestre 2\prog\LS_Racing" "C:\NAS\Blai\UNI\2n\Semestre 2\prog\LS_Racing" "C:\NAS\Blai\UNI\2n\Semestre 2\prog\LS_Racing\cmake-build-debug" "C:\NAS\Blai\UNI\2n\Semestre 2\prog\LS_Racing\cmake-build-debug" "C:\NAS\Blai\UNI\2n\Semestre 2\prog\LS_Racing\cmake-build-debug\CMakeFiles\LS_Racing.dir\DependInfo.cmake" --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\Alejandro\CLionProjects\LS_Racing C:\Users\Alejandro\CLionProjects\LS_Racing C:\Users\Alejandro\CLionProjects\LS_Racing\cmake-build-debug C:\Users\Alejandro\CLionProjects\LS_Racing\cmake-build-debug C:\Users\Alejandro\CLionProjects\LS_Racing\cmake-build-debug\CMakeFiles\LS_Racing.dir\DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/LS_Racing.dir/depend
 
