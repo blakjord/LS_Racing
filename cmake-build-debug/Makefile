@@ -230,6 +230,33 @@ configuracion.c.s:
 	$(MAKE) -f CMakeFiles\LS_Racing.dir\build.make CMakeFiles/LS_Racing.dir/configuracion.c.s
 .PHONY : configuracion.c.s
 
+grafico.obj: grafico.c.obj
+
+.PHONY : grafico.obj
+
+# target to build an object file
+grafico.c.obj:
+	$(MAKE) -f CMakeFiles\LS_Racing.dir\build.make CMakeFiles/LS_Racing.dir/grafico.c.obj
+.PHONY : grafico.c.obj
+
+grafico.i: grafico.c.i
+
+.PHONY : grafico.i
+
+# target to preprocess a source file
+grafico.c.i:
+	$(MAKE) -f CMakeFiles\LS_Racing.dir\build.make CMakeFiles/LS_Racing.dir/grafico.c.i
+.PHONY : grafico.c.i
+
+grafico.s: grafico.c.s
+
+.PHONY : grafico.s
+
+# target to generate assembly for a file
+grafico.c.s:
+	$(MAKE) -f CMakeFiles\LS_Racing.dir\build.make CMakeFiles/LS_Racing.dir/grafico.c.s
+.PHONY : grafico.c.s
+
 lectura.obj: lectura.c.obj
 
 .PHONY : lectura.obj
@@ -256,6 +283,33 @@ lectura.s: lectura.c.s
 lectura.c.s:
 	$(MAKE) -f CMakeFiles\LS_Racing.dir\build.make CMakeFiles/LS_Racing.dir/lectura.c.s
 .PHONY : lectura.c.s
+
+lista.obj: lista.c.obj
+
+.PHONY : lista.obj
+
+# target to build an object file
+lista.c.obj:
+	$(MAKE) -f CMakeFiles\LS_Racing.dir\build.make CMakeFiles/LS_Racing.dir/lista.c.obj
+.PHONY : lista.c.obj
+
+lista.i: lista.c.i
+
+.PHONY : lista.i
+
+# target to preprocess a source file
+lista.c.i:
+	$(MAKE) -f CMakeFiles\LS_Racing.dir\build.make CMakeFiles/LS_Racing.dir/lista.c.i
+.PHONY : lista.c.i
+
+lista.s: lista.c.s
+
+.PHONY : lista.s
+
+# target to generate assembly for a file
+lista.c.s:
+	$(MAKE) -f CMakeFiles\LS_Racing.dir\build.make CMakeFiles/LS_Racing.dir/lista.c.s
+.PHONY : lista.c.s
 
 main.obj: main.c.obj
 
@@ -305,9 +359,15 @@ help:
 	@echo ... configuracion.obj
 	@echo ... configuracion.i
 	@echo ... configuracion.s
+	@echo ... grafico.obj
+	@echo ... grafico.i
+	@echo ... grafico.s
 	@echo ... lectura.obj
 	@echo ... lectura.i
 	@echo ... lectura.s
+	@echo ... lista.obj
+	@echo ... lista.i
+	@echo ... lista.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

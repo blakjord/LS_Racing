@@ -8,7 +8,9 @@ set(CMAKE_DEPENDS_CHECK_C
   "C:/Users/Alejandro/CLionProjects/LS_Racing/carrera.c" "C:/Users/Alejandro/CLionProjects/LS_Racing/cmake-build-debug/CMakeFiles/LS_Racing.dir/carrera.c.obj"
   "C:/Users/Alejandro/CLionProjects/LS_Racing/clasificacion.c" "C:/Users/Alejandro/CLionProjects/LS_Racing/cmake-build-debug/CMakeFiles/LS_Racing.dir/clasificacion.c.obj"
   "C:/Users/Alejandro/CLionProjects/LS_Racing/configuracion.c" "C:/Users/Alejandro/CLionProjects/LS_Racing/cmake-build-debug/CMakeFiles/LS_Racing.dir/configuracion.c.obj"
+  "C:/Users/Alejandro/CLionProjects/LS_Racing/grafico.c" "C:/Users/Alejandro/CLionProjects/LS_Racing/cmake-build-debug/CMakeFiles/LS_Racing.dir/grafico.c.obj"
   "C:/Users/Alejandro/CLionProjects/LS_Racing/lectura.c" "C:/Users/Alejandro/CLionProjects/LS_Racing/cmake-build-debug/CMakeFiles/LS_Racing.dir/lectura.c.obj"
+  "C:/Users/Alejandro/CLionProjects/LS_Racing/lista.c" "C:/Users/Alejandro/CLionProjects/LS_Racing/cmake-build-debug/CMakeFiles/LS_Racing.dir/lista.c.obj"
   "C:/Users/Alejandro/CLionProjects/LS_Racing/main.c" "C:/Users/Alejandro/CLionProjects/LS_Racing/cmake-build-debug/CMakeFiles/LS_Racing.dir/main.c.obj"
   )
 set(CMAKE_C_COMPILER_ID "GNU")

@@ -102,10 +102,22 @@
 		<Unit filename="C:/Users/Alejandro/CLionProjects/LS_Racing/configuracion.h">
 			<Option target="LS_Racing"/>
 		</Unit>
+		<Unit filename="C:/Users/Alejandro/CLionProjects/LS_Racing/grafico.c">
+			<Option target="LS_Racing"/>
+		</Unit>
+		<Unit filename="C:/Users/Alejandro/CLionProjects/LS_Racing/grafico.h">
+			<Option target="LS_Racing"/>
+		</Unit>
 		<Unit filename="C:/Users/Alejandro/CLionProjects/LS_Racing/lectura.c">
 			<Option target="LS_Racing"/>
 		</Unit>
 		<Unit filename="C:/Users/Alejandro/CLionProjects/LS_Racing/lectura.h">
+			<Option target="LS_Racing"/>
+		</Unit>
+		<Unit filename="C:/Users/Alejandro/CLionProjects/LS_Racing/lista.c">
+			<Option target="LS_Racing"/>
+		</Unit>
+		<Unit filename="C:/Users/Alejandro/CLionProjects/LS_Racing/lista.h">
 			<Option target="LS_Racing"/>
 		</Unit>
 		<Unit filename="C:/Users/Alejandro/CLionProjects/LS_Racing/main.c">
