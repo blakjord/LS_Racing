@@ -123,7 +123,7 @@ General lecturaCorredores(char * argv, General general){
     general.corredor = (Corredor*)malloc(sizeof(Corredor)*7);
     for (int i = 0; i < 7; ++i) {
         fread(&general.corredor[i], sizeof(Corredor), 1, fp);
-        printf("i: %d, nombre: %s\n", i, general.corredor[i].nombreCorredor);
+        /*printf("i: %d, nombre: %s\n", i, general.corredor[i].nombreCorredor);
         printf("%s\n",general.corredor[i].escuderia);
         printf("%d\n", general.corredor[i].consumo);
         printf("%d\n", general.corredor[i].aceleracion);
@@ -131,7 +131,7 @@ General lecturaCorredores(char * argv, General general){
         printf("%d\n", general.corredor[i].condicionFisica);
         printf("%d\n", general.corredor[i].dorsal);
         printf("%d\n", general.corredor[i].fiabilidad);
-        printf("%d\n", general.corredor[i].reflejos);
+        printf("%d\n", general.corredor[i].reflejos);*/
     }
     printf("WHAT THE FUCK 3\n");
     fclose(fp);
