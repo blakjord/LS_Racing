@@ -5,10 +5,9 @@
 #ifndef LS_RACING_LISTA_H
 #define LS_RACING_LISTA_H
 #define MAXC 25
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include "lectura.h"
+#include "tipos.h"
 
+General GPLIST_create(General general);
+int GPLIST_insert(ListaGP *list, GP gp);
 
 #endif //LS_RACING_LISTA_H

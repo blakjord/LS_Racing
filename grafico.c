@@ -4,23 +4,60 @@
 
 #include "grafico.h"
 
+void pinta(General general, Coche * coche, int x, int y, ALLEGRO_BITMAP * boxes, ALLEGRO_BITMAP * neumaticos, ALLEGRO_BITMAP * cotxe, ALLEGRO_BITMAP * gasolina, ALLEGRO_BITMAP * motor){
+    float z = 0;
+    al_draw_scaled_bitmap(boxes, 0,0,al_get_bitmap_width(boxes),al_get_bitmap_height(boxes),0,0,600,550,0);
+    if (y == 0){
+        al_draw_scaled_bitmap(neumaticos, 0,0,al_get_bitmap_width(neumaticos),al_get_bitmap_height(neumaticos),650,120,60,60,0);
+    } else if (y > 0 && y < 4){
+        al_draw_scaled_bitmap(cotxe, 0,0,al_get_bitmap_width(cotxe),al_get_bitmap_height(cotxe),650,120,60,60,0);
+    } else if (y == 4){
+        al_draw_scaled_bitmap(gasolina, 0,0,al_get_bitmap_width(gasolina),al_get_bitmap_height(gasolina),650,120,60,60,0);
+    } else if (y == 5){
+        al_draw_scaled_bitmap(motor, 0,0,al_get_bitmap_width(motor),al_get_bitmap_height(motor),650,120,60,60,0);
+    }
+    al_draw_filled_triangle(680,80,655,95,705,95,LS_allegro_get_color(WHITE));      //arriba
+    al_draw_filled_rectangle(670,95,690,115,LS_allegro_get_color(WHITE));
+    al_draw_filled_triangle(680,220,655,205,705,205,LS_allegro_get_color(WHITE));   //abajo
+    al_draw_filled_rectangle(670,185,690,205,LS_allegro_get_color(WHITE));
+    al_draw_filled_triangle(610,150,625,125,625,175,LS_allegro_get_color(WHITE));   //izquierda
+    al_draw_filled_rectangle(625,140,645,160,LS_allegro_get_color(WHITE));
+    al_draw_filled_triangle(750,150,735,125,735,175,LS_allegro_get_color(WHITE));   //derecha
+    al_draw_filled_rectangle(715,140,735,160,LS_allegro_get_color(WHITE));
+    al_draw_textf(LS_allegro_get_font(NORMAL),LS_allegro_get_color(WHITE),670,20,0,"%s", general.categoria[y].nombreCategoria);
+    al_draw_textf(LS_allegro_get_font(SMALL),LS_allegro_get_color(WHITE),770,100,0,"%s", general.categoria[y].pieza[x].nombrePieza);
+    al_draw_textf(LS_allegro_get_font(SMALL),LS_allegro_get_color(WHITE),770,120,0,"VELOCIDAD: %d", general.categoria[y].pieza[x].velocidad);
+    al_draw_textf(LS_allegro_get_font(SMALL),LS_allegro_get_color(WHITE),770,140,0,"ACELERACION: %d", general.categoria[y].pieza[x].aceleracion);
+    al_draw_textf(LS_allegro_get_font(SMALL),LS_allegro_get_color(WHITE),770,160,0,"CONSUM: %d", general.categoria[y].pieza[x].consumo);
+    al_draw_textf(LS_allegro_get_font(SMALL),LS_allegro_get_color(WHITE),770,180,0,"FIABILIDAD: %d", general.categoria[y].pieza[x].fiabilidad);
+    al_draw_textf(LS_allegro_get_font(NORMAL),LS_allegro_get_color(WHITE),620,300,0,"CONFIGURACION ACTUAL");
+    for (int i = 0; i < general.numCategorias; ++i) {
+        al_draw_textf(LS_allegro_get_font(SMALL),LS_allegro_get_color(WHITE),620, 320+z,0,"%s: %s", general.categoria[i].nombreCategoria, coche->pieza[i].nombrePieza);
+        z += 15;
+    }
+    LS_allegro_clear_and_paint(BLACK);
+}
 
 void dibujaPanelConfiguracion(General general, Coche * coche){
     int nSortir = 0, x[general.numCategorias], y = 0;
-    float z;
-    ALLEGRO_BITMAP * boxes = NULL;
-    coche->pieza = (Pieza*)malloc(sizeof(Pieza)*general.numCategorias+1);
+    for (int i = 0; i < general.numCategorias; ++i) {
+        x[i] = 0;
+    }
+    coche->pieza = (Pieza*)malloc(sizeof(Pieza)*(general.numCategorias));
     //Inicialitzem Allegro
-    LS_allegro_init(800,600,"Tonto quien lo lea");
+    LS_allegro_init(anchoPantalla,altoPantalla,"Tonto quien lo lea");
+    ALLEGRO_BITMAP * boxes = NULL;
     boxes = al_load_bitmap("boxes.png");
-    //al_draw_bitmap(boxes,0,0,0);
-    al_draw_scaled_bitmap(boxes, 0, 0, 400, 600, 0, 0 , 400, 600, 0);
-    //al_flip_display();
-    //Bucle infinit del joc
-    char cadena[50];
+    ALLEGRO_BITMAP * cotxe = NULL;
+    cotxe = al_load_bitmap("cotxe.png");
+    ALLEGRO_BITMAP * gasolina = NULL;
+    gasolina = al_load_bitmap("gasolina.png");
+    ALLEGRO_BITMAP * motor = NULL;
+    motor = al_load_bitmap("motor.png");
+    ALLEGRO_BITMAP * neumaticos = NULL;
+    neumaticos = al_load_bitmap("neumaticos.png");
+    pinta(general,coche,x[y],y,boxes,neumaticos,cotxe,gasolina,motor);
     while(!nSortir){
-        z = 0;
-        coche->pieza[y] = general.categoria[y].pieza[x[y]];
         //Escoltem el teclat esperant la tecla ESC
         if(LS_allegro_key_pressed(ALLEGRO_KEY_UP)){
             if(y > 0){
@@ -28,6 +65,7 @@ void dibujaPanelConfiguracion(General general, Coche * coche){
             } else {
                 y = y + general.numCategorias-1;
             }
+            pinta(general,coche,x[y],y,boxes,neumaticos,cotxe,gasolina,motor);
         }
         if(LS_allegro_key_pressed(ALLEGRO_KEY_DOWN)){
             if (y < general.numCategorias-1){
@@ -35,6 +73,7 @@ void dibujaPanelConfiguracion(General general, Coche * coche){
             } else {
                 y = y - general.numCategorias+1;
             }
+            pinta(general,coche,x[y],y,boxes,neumaticos,cotxe,gasolina,motor);
         }
         if(LS_allegro_key_pressed(ALLEGRO_KEY_RIGHT)){
             if (x[y] < general.categoria[y].numPiezas-1){
@@ -42,6 +81,7 @@ void dibujaPanelConfiguracion(General general, Coche * coche){
             } else {
                 x[y] = x[y] - general.categoria[y].numPiezas+1;
             }
+            pinta(general,coche,x[y],y,boxes,neumaticos,cotxe,gasolina,motor);
         }
         if(LS_allegro_key_pressed(ALLEGRO_KEY_LEFT)){
             if (x[y] > 0){
@@ -49,35 +89,20 @@ void dibujaPanelConfiguracion(General general, Coche * coche){
             } else {
                 x[y] = x[y] + general.categoria[y].numPiezas-1;
             }
+            pinta(general,coche,x[y],y,boxes,neumaticos,cotxe,gasolina,motor);
         }
         if(LS_allegro_key_pressed(ALLEGRO_KEY_ESCAPE)){
             nSortir = 1;
         }
         //Donem l'ordre d'escriure el text de benvinguda
-        al_draw_textf(LS_allegro_get_font(NORMAL),LS_allegro_get_color(WHITE),520,20,0,"%s", general.categoria[y].nombreCategoria);
-        al_draw_textf(LS_allegro_get_font(SMALL),LS_allegro_get_color(WHITE),540,100,0,"%s", general.categoria[y].pieza[x[y]].nombrePieza);
-        al_draw_textf(LS_allegro_get_font(SMALL),LS_allegro_get_color(WHITE),540,120,0,"VELOCIDAD: %d", general.categoria[y].pieza[x[y]].velocidad);
-        al_draw_textf(LS_allegro_get_font(SMALL),LS_allegro_get_color(WHITE),540,140,0,"ACELERACION: %d", general.categoria[y].pieza[x[y]].aceleracion);
-        al_draw_textf(LS_allegro_get_font(SMALL),LS_allegro_get_color(WHITE),540,160,0,"CONSUM: %d", general.categoria[y].pieza[x[y]].consumo);
-        al_draw_textf(LS_allegro_get_font(SMALL),LS_allegro_get_color(WHITE),540,180,0,"FIABILIDAD: %d", general.categoria[y].pieza[x[y]].fiabilidad);
-        al_draw_textf(LS_allegro_get_font(NORMAL),LS_allegro_get_color(WHITE),540,300,0,"CONFIGURACION ACTUAL");
-
-        al_draw_textf(LS_allegro_get_font(SMALL),LS_allegro_get_color(WHITE),540,320,0,"%s: %s", general.categoria[0].nombreCategoria, coche->pieza[0].nombrePieza);
-        al_draw_textf(LS_allegro_get_font(SMALL),LS_allegro_get_color(WHITE),540,340,0,"%s: %s", general.categoria[1].nombreCategoria, coche->pieza[1].nombrePieza);
-        al_draw_textf(LS_allegro_get_font(SMALL),LS_allegro_get_color(WHITE),540,360,0,"%s: %s", general.categoria[2].nombreCategoria, coche->pieza[2].nombrePieza);
-        al_draw_textf(LS_allegro_get_font(SMALL),LS_allegro_get_color(WHITE),540,380,0,"%s: %s", general.categoria[3].nombreCategoria, coche->pieza[3].nombrePieza);
-        al_draw_textf(LS_allegro_get_font(SMALL),LS_allegro_get_color(WHITE),540,400,0,"%s: %s", general.categoria[4].nombreCategoria, coche->pieza[4].nombrePieza);
-        al_draw_textf(LS_allegro_get_font(SMALL),LS_allegro_get_color(WHITE),540,420,0,"%s: %s", general.categoria[5].nombreCategoria, coche->pieza[5].nombrePieza);
-        /*printf("%f",z);
-        scanf("%s",cadena);*/
-        /*for (int i = 0; i < general.numCategorias; ++i) {
-            //al_draw_textf(LS_allegro_get_font(SMALL),LS_allegro_get_color(WHITE),540, 320+z,0,"%s: %s", general.categoria[i].nombreCategoria, coche->pieza[i].nombrePieza);
-            z += 20;
-        }*/
-        //Pintem la pantalla de la finestra gràfica
-        LS_allegro_clear_and_paint(BLACK);
+        coche->pieza[y] = general.categoria[y].pieza[x[y]];
     }
     al_destroy_bitmap(boxes);
+    al_destroy_bitmap(neumaticos);
+    al_destroy_bitmap(cotxe);
+    al_destroy_bitmap(gasolina);
+    al_destroy_bitmap(motor);
     //Tanquem la finestra gràfica
     LS_allegro_exit();
 }
+

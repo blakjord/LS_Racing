@@ -1,7 +1,7 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
 #include "lectura.h"
+#include "configuracion.h"
+#include "carrera.h"
+#include "clasificacion.h"
 
 int main(int argc, char *argv[]){
     if (argc != 5){

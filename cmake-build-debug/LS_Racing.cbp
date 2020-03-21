@@ -123,6 +123,9 @@
 		<Unit filename="C:/Users/Alejandro/CLionProjects/LS_Racing/main.c">
 			<Option target="LS_Racing"/>
 		</Unit>
+		<Unit filename="C:/Users/Alejandro/CLionProjects/LS_Racing/tipos.h">
+			<Option target="LS_Racing"/>
+		</Unit>
 		<Unit filename="C:/Users/Alejandro/CLionProjects/LS_Racing/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

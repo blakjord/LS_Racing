@@ -14,25 +14,31 @@ CMakeFiles/LS_Racing.dir/configuracion.c.obj: ../LS_allegro.h
 CMakeFiles/LS_Racing.dir/configuracion.c.obj: ../configuracion.c
 CMakeFiles/LS_Racing.dir/configuracion.c.obj: ../configuracion.h
 CMakeFiles/LS_Racing.dir/configuracion.c.obj: ../grafico.h
-CMakeFiles/LS_Racing.dir/configuracion.c.obj: ../lectura.h
-CMakeFiles/LS_Racing.dir/configuracion.c.obj: ../lista.h
+CMakeFiles/LS_Racing.dir/configuracion.c.obj: ../tipos.h
 
 CMakeFiles/LS_Racing.dir/grafico.c.obj: ../LS_allegro.h
-CMakeFiles/LS_Racing.dir/grafico.c.obj: ../configuracion.h
 CMakeFiles/LS_Racing.dir/grafico.c.obj: ../grafico.c
 CMakeFiles/LS_Racing.dir/grafico.c.obj: ../grafico.h
-CMakeFiles/LS_Racing.dir/grafico.c.obj: ../lectura.h
-CMakeFiles/LS_Racing.dir/grafico.c.obj: ../lista.h
+CMakeFiles/LS_Racing.dir/grafico.c.obj: ../tipos.h
 
+CMakeFiles/LS_Racing.dir/lectura.c.obj: ../LS_allegro.h
 CMakeFiles/LS_Racing.dir/lectura.c.obj: ../lectura.c
 CMakeFiles/LS_Racing.dir/lectura.c.obj: ../lectura.h
 CMakeFiles/LS_Racing.dir/lectura.c.obj: ../lista.h
+CMakeFiles/LS_Racing.dir/lectura.c.obj: ../tipos.h
 
-CMakeFiles/LS_Racing.dir/lista.c.obj: ../lectura.h
+CMakeFiles/LS_Racing.dir/lista.c.obj: ../LS_allegro.h
 CMakeFiles/LS_Racing.dir/lista.c.obj: ../lista.c
 CMakeFiles/LS_Racing.dir/lista.c.obj: ../lista.h
+CMakeFiles/LS_Racing.dir/lista.c.obj: ../tipos.h
 
+CMakeFiles/LS_Racing.dir/main.c.obj: ../LS_allegro.h
+CMakeFiles/LS_Racing.dir/main.c.obj: ../carrera.h
+CMakeFiles/LS_Racing.dir/main.c.obj: ../clasificacion.h
+CMakeFiles/LS_Racing.dir/main.c.obj: ../configuracion.h
+CMakeFiles/LS_Racing.dir/main.c.obj: ../grafico.h
 CMakeFiles/LS_Racing.dir/main.c.obj: ../lectura.h
 CMakeFiles/LS_Racing.dir/main.c.obj: ../lista.h
 CMakeFiles/LS_Racing.dir/main.c.obj: ../main.c
+CMakeFiles/LS_Racing.dir/main.c.obj: ../tipos.h
 

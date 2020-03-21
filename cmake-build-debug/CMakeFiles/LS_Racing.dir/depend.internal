@@ -15,24 +15,30 @@ CMakeFiles/LS_Racing.dir/configuracion.c.obj
  C:/Users/Alejandro/CLionProjects/LS_Racing/configuracion.c
  C:/Users/Alejandro/CLionProjects/LS_Racing/configuracion.h
  C:/Users/Alejandro/CLionProjects/LS_Racing/grafico.h
- C:/Users/Alejandro/CLionProjects/LS_Racing/lectura.h
- C:/Users/Alejandro/CLionProjects/LS_Racing/lista.h
+ C:/Users/Alejandro/CLionProjects/LS_Racing/tipos.h
 CMakeFiles/LS_Racing.dir/grafico.c.obj
  C:/Users/Alejandro/CLionProjects/LS_Racing/LS_allegro.h
- C:/Users/Alejandro/CLionProjects/LS_Racing/configuracion.h
  C:/Users/Alejandro/CLionProjects/LS_Racing/grafico.c
  C:/Users/Alejandro/CLionProjects/LS_Racing/grafico.h
- C:/Users/Alejandro/CLionProjects/LS_Racing/lectura.h
- C:/Users/Alejandro/CLionProjects/LS_Racing/lista.h
+ C:/Users/Alejandro/CLionProjects/LS_Racing/tipos.h
 CMakeFiles/LS_Racing.dir/lectura.c.obj
+ C:/Users/Alejandro/CLionProjects/LS_Racing/LS_allegro.h
  C:/Users/Alejandro/CLionProjects/LS_Racing/lectura.c
  C:/Users/Alejandro/CLionProjects/LS_Racing/lectura.h
  C:/Users/Alejandro/CLionProjects/LS_Racing/lista.h
+ C:/Users/Alejandro/CLionProjects/LS_Racing/tipos.h
 CMakeFiles/LS_Racing.dir/lista.c.obj
- C:/Users/Alejandro/CLionProjects/LS_Racing/lectura.h
+ C:/Users/Alejandro/CLionProjects/LS_Racing/LS_allegro.h
  C:/Users/Alejandro/CLionProjects/LS_Racing/lista.c
  C:/Users/Alejandro/CLionProjects/LS_Racing/lista.h
+ C:/Users/Alejandro/CLionProjects/LS_Racing/tipos.h
 CMakeFiles/LS_Racing.dir/main.c.obj
+ C:/Users/Alejandro/CLionProjects/LS_Racing/LS_allegro.h
+ C:/Users/Alejandro/CLionProjects/LS_Racing/carrera.h
+ C:/Users/Alejandro/CLionProjects/LS_Racing/clasificacion.h
+ C:/Users/Alejandro/CLionProjects/LS_Racing/configuracion.h
+ C:/Users/Alejandro/CLionProjects/LS_Racing/grafico.h
  C:/Users/Alejandro/CLionProjects/LS_Racing/lectura.h
  C:/Users/Alejandro/CLionProjects/LS_Racing/lista.h
  C:/Users/Alejandro/CLionProjects/LS_Racing/main.c
+ C:/Users/Alejandro/CLionProjects/LS_Racing/tipos.h

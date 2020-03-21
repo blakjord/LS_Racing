@@ -47,6 +47,8 @@ int configurarCoche(General general){
         }
     } while (coche.corredor.gestNeumaticos < 0 || coche.corredor.gestNeumaticos > 10);
     printf("\n\nCargando configurador ...");*/
+
+    
     dibujaPanelConfiguracion(general,&coche);
     return 1;
 }
