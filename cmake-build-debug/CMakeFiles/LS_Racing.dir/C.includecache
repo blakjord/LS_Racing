@@ -28,13 +28,37 @@ C:/Users/Alejandro/CLionProjects/LS_Racing/allegro5/allegro_font.h
 allegro5/allegro_ttf.h
 C:/Users/Alejandro/CLionProjects/LS_Racing/allegro5/allegro_ttf.h
 
-C:/Users/Alejandro/CLionProjects/LS_Racing/grafico.c
+C:/Users/Alejandro/CLionProjects/LS_Racing/carrera.h
+
+C:/Users/Alejandro/CLionProjects/LS_Racing/clasificacion.h
+
+C:/Users/Alejandro/CLionProjects/LS_Racing/configuracion.h
+tipos.h
+C:/Users/Alejandro/CLionProjects/LS_Racing/tipos.h
 grafico.h
 C:/Users/Alejandro/CLionProjects/LS_Racing/grafico.h
 
 C:/Users/Alejandro/CLionProjects/LS_Racing/grafico.h
 tipos.h
 C:/Users/Alejandro/CLionProjects/LS_Racing/tipos.h
+
+C:/Users/Alejandro/CLionProjects/LS_Racing/lectura.h
+lista.h
+C:/Users/Alejandro/CLionProjects/LS_Racing/lista.h
+
+C:/Users/Alejandro/CLionProjects/LS_Racing/lista.h
+tipos.h
+C:/Users/Alejandro/CLionProjects/LS_Racing/tipos.h
+
+C:/Users/Alejandro/CLionProjects/LS_Racing/main.c
+lectura.h
+C:/Users/Alejandro/CLionProjects/LS_Racing/lectura.h
+configuracion.h
+C:/Users/Alejandro/CLionProjects/LS_Racing/configuracion.h
+carrera.h
+C:/Users/Alejandro/CLionProjects/LS_Racing/carrera.h
+clasificacion.h
+C:/Users/Alejandro/CLionProjects/LS_Racing/clasificacion.h
 
 C:/Users/Alejandro/CLionProjects/LS_Racing/tipos.h
 stdio.h

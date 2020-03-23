@@ -1,5 +1,5 @@
 //
-// Created by Alejandro on 03/03/2020.
+// Alejandro Viana Labà - Blai Jordan Borobia | Logins: alejandro.viana - blai.jordan
 //
 #include "lectura.h"
 
@@ -20,33 +20,29 @@ General lecturaPiezas(char * argv, General general) {
         exit(0);
     }
     fscanf(fp,"%d",&general.numCategorias);
-    //printf("%d",general.numCategorias);
     general.categoria = malloc(sizeof(Categoria));
     for (int i = 0; i < general.numCategorias; ++i) {
-        //printf("i: %d\n",i);
         general.categoria = (Categoria*)realloc(general.categoria, sizeof(Categoria)*(i+1));
         fscanf(fp,"%s",general.categoria[i].nombreCategoria);
         fscanf(fp,"%c", &aux);
         while (aux != '\n'){
             fscanf(fp,"%s",cadena);
             fscanf(fp,"%c", &aux);
+            strcat(general.categoria[i].nombreCategoria," ");
             strcat(general.categoria[i].nombreCategoria,cadena);
         }
-        //printf("Nombre Categoria: %s\n", general.categoria[i].nombreCategoria);
         fscanf(fp,"%d", &general.categoria[i].numPiezas);
-        //printf("Numero Piezas %d\n", general.categoria[i].numPiezas);
         general.categoria[i].pieza = (Pieza*)malloc(sizeof(Pieza));
         for (int j = 0; j < general.categoria[i].numPiezas; ++j) {
-            //printf("j: %d\n",j);
             general.categoria[i].pieza = (Pieza*)realloc(general.categoria[i].pieza, sizeof(Pieza)*(j+1));
             fscanf(fp,"%s",general.categoria[i].pieza[j].nombrePieza);
             fscanf(fp,"%c", &aux);
             while (aux != '\n'){
                 fscanf(fp,"%s",cadena);
                 fscanf(fp,"%c", &aux);
+                strcat(general.categoria[i].pieza[j].nombrePieza," ");
                 strcat(general.categoria[i].pieza[j].nombrePieza,cadena);
             }
-            //printf("Nombre Piezas: %s\n", general.categoria[i].pieza[j].nombrePieza);
             fscanf(fp, "%d", &general.categoria[i].pieza[j].velocidad);
             fscanf(fp, "%d", &general.categoria[i].pieza[j].aceleracion);
             fscanf(fp, "%d", &general.categoria[i].pieza[j].consumo);
@@ -58,56 +54,36 @@ General lecturaPiezas(char * argv, General general) {
     return general;
 }
 
-/*void swap(GP * gp1, GP * gp2){
-    GP * aux = NULL;
-    *aux = *gp1;
-    *gp1 = *gp2;
-    *gp2 = *aux;
-}
-
-void bubbleSort(GP * gp, int n){
-    int i, j,r;
-    for (i = 0; i < n-1; i++){
-        for (j = 0; j < n-i-1; j++){
-            r = strcmp(,);
-            if (r > 0){
-                swap(&gp[j], &gp[j+1]);
-            }
-        }
-    }
-}*/
-
 General lecturaGPs(char * argv, General general){
     char cadena[50], aux = ' ';
-    GP * gp;
-    general = GPLIST_create(general);
+    GP gpaux;
+    general.listaGP = NULL;
+    struct _node * new_node;
     FILE * fp = fopen(argv, "r");
     if (fp == NULL) {
         printf("Error: Fichero inexistente.\n\n");
         exit(0);
     }
-    fscanf(fp, "%d", &general.listaGp.numGPs);
-    gp = (GP*)malloc(sizeof(GP));
-    for (int i = 0; i < general.listaGp.numGPs; ++i) {
-        //printf("i: %d",i);
-        gp = (GP*)realloc(gp, sizeof(GP)*(i+1));
-        fscanf(fp, "%d", &gp[i].posCalndario);
-        fscanf(fp, "%s", gp[i].nombreGP);
+    fscanf(fp, "%d", &general.numGPs);
+    for (int i = 0; i < general.numGPs; ++i) {
+        fscanf(fp, "%d", &gpaux.posCalndario);
+        fscanf(fp, "%s", gpaux.nombreGP);
         fscanf(fp,"%c", &aux);
         while (aux != '\n'){
             fscanf(fp,"%s",cadena);
             fscanf(fp,"%c", &aux);
-            strcat(gp[i].nombreGP,cadena);
+            strcat(gpaux.nombreGP," ");
+            strcat(gpaux.nombreGP,cadena);
         }
-        //printf("%s",general.gp[i].nombreGP);
-        fscanf(fp, "%d", &gp[i].velocidadAdec);
-        fscanf(fp, "%d", &gp[i].aceleracionAdec);
-        fscanf(fp, "%d", &gp[i].consumoAdec);
-        fscanf(fp, "%d", &gp[i].fiabilidadAdec);
-        fscanf(fp, "%f", &gp[i].tiempoBase);
-        fscanf(fp, "%d", &gp[i].tiempoPinStop);
-        fscanf(fp, "%d", &gp[i].numeroPinStop);
-        GPLIST_insert(&general.listaGp , gp[i]);
+        fscanf(fp, "%d", &gpaux.velocidadAdec);
+        fscanf(fp, "%d", &gpaux.aceleracionAdec);
+        fscanf(fp, "%d", &gpaux.consumoAdec);
+        fscanf(fp, "%d", &gpaux.fiabilidadAdec);
+        fscanf(fp, "%f", &gpaux.tiempoBase);
+        fscanf(fp, "%d", &gpaux.tiempoPinStop);
+        fscanf(fp, "%d", &gpaux.numeroPinStop);
+        new_node = newNode(gpaux);
+        sortedInsert(&general.listaGP,new_node);
     }
     fclose(fp);
     printf("WHAT THE FUCK 2\n");
@@ -123,15 +99,6 @@ General lecturaCorredores(char * argv, General general){
     general.corredor = (Corredor*)malloc(sizeof(Corredor)*7);
     for (int i = 0; i < 7; ++i) {
         fread(&general.corredor[i], sizeof(Corredor), 1, fp);
-        /*printf("i: %d, nombre: %s\n", i, general.corredor[i].nombreCorredor);
-        printf("%s\n",general.corredor[i].escuderia);
-        printf("%d\n", general.corredor[i].consumo);
-        printf("%d\n", general.corredor[i].aceleracion);
-        printf("%d\n", general.corredor[i].velocidad);
-        printf("%d\n", general.corredor[i].condicionFisica);
-        printf("%d\n", general.corredor[i].dorsal);
-        printf("%d\n", general.corredor[i].fiabilidad);
-        printf("%d\n", general.corredor[i].reflejos);*/
     }
     printf("WHAT THE FUCK 3\n");
     fclose(fp);
@@ -145,7 +112,6 @@ General lecturaBase(char * argv, General general){
         exit(0);
     }
     fread(&general.base, sizeof(Base), 1, fp);
-    //printf("Estadisticas: %d , %d , %d , %d .", general.base.fiabilidad, general.base.velocidad, general.base.aceleracion, general.base.consumo);
     printf("WHAT THE FUCK 4\n");
     fclose(fp);
     return general;

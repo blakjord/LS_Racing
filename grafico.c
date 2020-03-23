@@ -1,10 +1,10 @@
 //
-// Created by Alejandro on 05/03/2020.
+// Alejandro Viana Labà - Blai Jordan Borobia | Logins: alejandro.viana - blai.jordan
 //
 
 #include "grafico.h"
 
-void pinta(General general, Coche * coche, int x, int y, ALLEGRO_BITMAP * boxes, ALLEGRO_BITMAP * neumaticos, ALLEGRO_BITMAP * cotxe, ALLEGRO_BITMAP * gasolina, ALLEGRO_BITMAP * motor){
+void pintaConfig(General general, Coche * coche, int x, int y, ALLEGRO_BITMAP * boxes, ALLEGRO_BITMAP * neumaticos, ALLEGRO_BITMAP * cotxe, ALLEGRO_BITMAP * gasolina, ALLEGRO_BITMAP * motor){
     float z = 0;
     al_draw_scaled_bitmap(boxes, 0,0,al_get_bitmap_width(boxes),al_get_bitmap_height(boxes),0,0,600,550,0);
     if (y == 0){
@@ -56,7 +56,7 @@ void dibujaPanelConfiguracion(General general, Coche * coche){
     motor = al_load_bitmap("motor.png");
     ALLEGRO_BITMAP * neumaticos = NULL;
     neumaticos = al_load_bitmap("neumaticos.png");
-    pinta(general,coche,x[y],y,boxes,neumaticos,cotxe,gasolina,motor);
+    pintaConfig(general,coche,x[y],y,boxes,neumaticos,cotxe,gasolina,motor);
     while(!nSortir){
         //Escoltem el teclat esperant la tecla ESC
         if(LS_allegro_key_pressed(ALLEGRO_KEY_UP)){
@@ -65,7 +65,7 @@ void dibujaPanelConfiguracion(General general, Coche * coche){
             } else {
                 y = y + general.numCategorias-1;
             }
-            pinta(general,coche,x[y],y,boxes,neumaticos,cotxe,gasolina,motor);
+            pintaConfig(general,coche,x[y],y,boxes,neumaticos,cotxe,gasolina,motor);
         }
         if(LS_allegro_key_pressed(ALLEGRO_KEY_DOWN)){
             if (y < general.numCategorias-1){
@@ -73,7 +73,7 @@ void dibujaPanelConfiguracion(General general, Coche * coche){
             } else {
                 y = y - general.numCategorias+1;
             }
-            pinta(general,coche,x[y],y,boxes,neumaticos,cotxe,gasolina,motor);
+            pintaConfig(general,coche,x[y],y,boxes,neumaticos,cotxe,gasolina,motor);
         }
         if(LS_allegro_key_pressed(ALLEGRO_KEY_RIGHT)){
             if (x[y] < general.categoria[y].numPiezas-1){
@@ -81,7 +81,7 @@ void dibujaPanelConfiguracion(General general, Coche * coche){
             } else {
                 x[y] = x[y] - general.categoria[y].numPiezas+1;
             }
-            pinta(general,coche,x[y],y,boxes,neumaticos,cotxe,gasolina,motor);
+            pintaConfig(general,coche,x[y],y,boxes,neumaticos,cotxe,gasolina,motor);
         }
         if(LS_allegro_key_pressed(ALLEGRO_KEY_LEFT)){
             if (x[y] > 0){
@@ -89,13 +89,18 @@ void dibujaPanelConfiguracion(General general, Coche * coche){
             } else {
                 x[y] = x[y] + general.categoria[y].numPiezas-1;
             }
-            pinta(general,coche,x[y],y,boxes,neumaticos,cotxe,gasolina,motor);
+            pintaConfig(general,coche,x[y],y,boxes,neumaticos,cotxe,gasolina,motor);
         }
         if(LS_allegro_key_pressed(ALLEGRO_KEY_ESCAPE)){
             nSortir = 1;
         }
         //Donem l'ordre d'escriure el text de benvinguda
         coche->pieza[y] = general.categoria[y].pieza[x[y]];
+    }
+    for (int j = 0; j < general.numCategorias; ++j) {
+        if (strlen(coche->pieza[j].nombrePieza) == 0){
+            coche->pieza[j] = general.categoria[j].pieza[0];
+        }
     }
     al_destroy_bitmap(boxes);
     al_destroy_bitmap(neumaticos);

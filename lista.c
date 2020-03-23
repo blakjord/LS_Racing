@@ -1,45 +1,38 @@
 //
-// Created by Alejandro on 05/03/2020.
+// Alejandro Viana Labà - Blai Jordan Borobia | Logins: alejandro.viana - blai.jordan
 //
 #include "lista.h"
 
-General GPLIST_create(General general) {
-    //Dedicamos memoria al nodo fantasma "first" y "last"
-    general.listaGp.first = (GP *) malloc(sizeof(GP));
-    general.listaGp.last = (GP *) malloc(sizeof(GP));
-    if (general.listaGp.first == NULL || general.listaGp.last == NULL) {
-        printf("Error");
+void sortedInsert(struct _node** head_ref, struct _node* new_node){
+    struct _node * current;
+    /* Special case for the head end */
+    if (*head_ref == NULL || (*head_ref)->posCalndario >= new_node->posCalndario){
+        new_node->next = *head_ref;
+        *head_ref = new_node;
     } else {
-        //Colocamos los nodos de forma ordenada
-        general.listaGp.first->next = general.listaGp.last;
-        general.listaGp.last->prev = general.listaGp.first;
-        general.listaGp.first->prev = NULL;
-        general.listaGp.last->next = NULL;
-        general.listaGp.pdi = general.listaGp.first;
+        /* Locate the node before the point of insertion */
+        current = *head_ref;
+        while (current->next!=NULL && current->next->posCalndario < new_node->posCalndario) {
+            current = current->next;
+        }
+        new_node->next = current->next;
+        current->next = new_node;
     }
-    return general;
 }
 
-int GPLIST_insert(ListaGP *list, GP gp) {
-    GP *n = (GP *) malloc(sizeof(GP));
-    if (n == NULL){
-        return 0;
-    } else {
-        //Enlazamos los nodos siguiente y anterior al nuevo nodo que queremos añadir
-        n->posCalndario = gp.posCalndario;
-        strcpy (n->nombreGP, gp.nombreGP);
-        n->velocidadAdec = gp.velocidadAdec;
-        n->aceleracionAdec = gp.aceleracionAdec;
-        n->consumoAdec = gp.consumoAdec;
-        n->fiabilidadAdec = gp.fiabilidadAdec;
-        n->tiempoBase = gp.tiempoBase;
-        n->tiempoPinStop = gp.tiempoPinStop;
-        n->numeroPinStop = gp.numeroPinStop;
-        n->next = list->pdi->next;
-        n->prev = list->pdi;
-        list->pdi->next = n;
-        list->pdi = n;
-        list->pdi->next->prev = list->pdi;
-    }
-    return 1;
+struct _node *newNode(GP gp){
+    /* allocate node */
+    struct _node* new_node = (struct _node*) malloc(sizeof(struct _node));
+    /* put in the data  */
+    new_node->posCalndario  = gp.posCalndario;
+    strcpy(new_node->nombreGP,gp.nombreGP);
+    new_node->velocidadAdec  = gp.velocidadAdec;
+    new_node->aceleracionAdec  = gp.aceleracionAdec;
+    new_node->consumoAdec  = gp.consumoAdec;
+    new_node->fiabilidadAdec  = gp.fiabilidadAdec;
+    new_node->tiempoBase  = gp.tiempoBase;
+    new_node->tiempoPinStop  = gp.tiempoPinStop;
+    new_node->numeroPinStop  = gp.numeroPinStop;
+    new_node->next =  NULL;
+    return new_node;
 }

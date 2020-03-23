@@ -1,3 +1,6 @@
+//
+// Alejandro Viana Labà - Blai Jordan Borobia | Logins: alejandro.viana - blai.jordan
+//
 #include "LS_allegro.h"
 
 //Constants internes del mòdul

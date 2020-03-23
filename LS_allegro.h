@@ -1,3 +1,6 @@
+//
+// Alejandro Viana Labà - Blai Jordan Borobia | Logins: alejandro.viana - blai.jordan
+//
 /*
     Mòdul de simplificació i adaptació de l'API de la llibreria
     Allegro 5 per al desenvolupament senzill de jocs 2D a l'assignatura

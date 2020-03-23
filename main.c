@@ -1,3 +1,6 @@
+//
+// Alejandro Viana Labà - Blai Jordan Borobia | Logins: alejandro.viana - blai.jordan
+//
 #include "lectura.h"
 #include "configuracion.h"
 #include "carrera.h"
@@ -9,10 +12,11 @@ int main(int argc, char *argv[]){
         exit(-1);
     }
     General general = lecturaFicheros(argv);
+    Coche coche;
     printf("Bienvenidos a LS Racing !\n");
     char opcion[50];
-    /*do{
-        printf("   1. Configurar coche\n");
+    do{
+        printf("\n   1. Configurar coche\n");
         printf("   2. Carrera\n");
         printf("   3. Ver clasificacion\n");
         printf("   4. Guardar temporada\n\n");
@@ -21,7 +25,7 @@ int main(int argc, char *argv[]){
         if (strcmp(opcion,"exit")!=0){
             switch (atoi(opcion)) {
                 case 1:
-                    configurarCoche(general);
+                    configurarCoche(general,&coche);
                     break;
                 case 2:
                     printf("Se ejecuta la opcion 2");
@@ -38,9 +42,10 @@ int main(int argc, char *argv[]){
             }
         }
     } while (strcmp(opcion,"exit")!=0);
+    free(coche.pieza);
+    free(general.listaGP);
     free(general.categoria->pieza);
     free(general.categoria);
-    free(general.corredor);*/
-    configurarCoche(general);
+    free(general.corredor);
     return 0;
 }

@@ -1,5 +1,5 @@
 //
-// Created by Alejandro on 03/03/2020.
+// Alejandro Viana Labà - Blai Jordan Borobia | Logins: alejandro.viana - blai.jordan
 //
 
 #ifndef LS_RACING_CONFIGURACION_H
@@ -9,6 +9,6 @@
 #include "grafico.h"
 
 
-int configurarCoche(General general);
+int configurarCoche(General general, Coche * coche);
 
 #endif //LS_RACING_CONFIGURACION_H

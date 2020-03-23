@@ -1,5 +1,5 @@
 //
-// Created by Alejandro on 11/03/2020.
+// Alejandro Viana Labà - Blai Jordan Borobia | Logins: alejandro.viana - blai.jordan
 //
 
 #ifndef LS_RACING_TIPOS_H
@@ -34,16 +34,8 @@ typedef struct _node{
     float tiempoBase;
     int tiempoPinStop;
     int numeroPinStop;
-    struct _node *prev;
     struct _node *next;
 } GP;
-
-typedef struct {
-    GP * first;
-    GP * pdi;
-    GP * last;
-    int numGPs;
-} ListaGP;
 
 typedef struct {
     char nombreCorredor[MAXC];
@@ -69,7 +61,8 @@ typedef struct {
 typedef struct {
     Categoria * categoria;
     int numCategorias;
-    ListaGP listaGp;
+    struct _node * listaGP;
+    int numGPs;
     Corredor * corredor;
     int numCorredores;
     Base base;

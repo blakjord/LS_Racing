@@ -1,5 +1,5 @@
 //
-// Created by Alejandro on 05/03/2020.
+// Alejandro Viana Labà - Blai Jordan Borobia | Logins: alejandro.viana - blai.jordan
 //
 
 #ifndef LS_RACING_LISTA_H
@@ -7,7 +7,7 @@
 #define MAXC 25
 #include "tipos.h"
 
-General GPLIST_create(General general);
-int GPLIST_insert(ListaGP *list, GP gp);
+void sortedInsert(struct _node** head_ref, struct _node* new_node);
+struct _node *newNode(GP gp);
 
 #endif //LS_RACING_LISTA_H

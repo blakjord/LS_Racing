@@ -1,5 +1,5 @@
 //
-// Created by Alejandro on 03/03/2020.
+// Alejandro Viana Labà - Blai Jordan Borobia | Logins: alejandro.viana - blai.jordan
 //
 
 #ifndef LS_RACING_CLASIFICACION_H
