@@ -4,6 +4,8 @@
 #include "lectura.h"
 
 General lecturaFicheros(char * argv[]){
+    //Funcion general de la lectura de los ficheros la cual crea el struct "general" que sera el que devolvera la funcion, y llama a todas las funciones
+    //de lectura de cada archivo para llenar el struct y devolverlo.
     General general;
     general = lecturaPiezas(argv[1], general);
     general = lecturaGPs(argv[2], general);
@@ -13,6 +15,8 @@ General lecturaFicheros(char * argv[]){
 }
 
 General lecturaPiezas(char * argv, General general) {
+    //Funcion de lectura del fichero txt de piezas, la lectura se hace linea a linea leyendo cada pieza el numero de veces que se indica al pricipio,
+    //se almacena tod0 en un struct Categoria dandole espacio de forma dinamica.
     char cadena[50], aux = ' ';
     FILE * fp = fopen(argv, "r");
     if (fp == NULL) {
@@ -49,12 +53,13 @@ General lecturaPiezas(char * argv, General general) {
             fscanf(fp, "%d", &general.categoria[i].pieza[j].fiabilidad);
         }
     }
-    printf("WHAT THE FUCK 1\n");
     fclose(fp);
     return general;
 }
 
 General lecturaGPs(char * argv, General general){
+    //Funcion de lectura del fichero txt de Grandes Premios, la lectura se hace linea a linea leyendo cada gran premio el numero de veces que se indica
+    // al pricipio, se almacena tod0 en una lista ordenada creando un nuevo nodo a cada gran premio y insertandolo a la lista de menos posCalendario a mas.
     char cadena[50], aux = ' ';
     GP gpaux;
     general.listaGP = NULL;
@@ -86,11 +91,12 @@ General lecturaGPs(char * argv, General general){
         sortedInsert(&general.listaGP,new_node);
     }
     fclose(fp);
-    printf("WHAT THE FUCK 2\n");
     return general;
 }
 
 General lecturaCorredores(char * argv, General general){
+    //Funcion del fichero binario de corredores, la lectura se hace struct a struct, como se asegura que siempre habra 7 pilotos reservamos directamente
+    //el espacio para los 7.
     FILE * fp = fopen(argv, "r");
     if (fp == NULL) {
         printf("Error: Fichero inexistente.\n\n");
@@ -100,19 +106,18 @@ General lecturaCorredores(char * argv, General general){
     for (int i = 0; i < 7; ++i) {
         fread(&general.corredor[i], sizeof(Corredor), 1, fp);
     }
-    printf("WHAT THE FUCK 3\n");
     fclose(fp);
     return general;
 }
 
 General lecturaBase(char * argv, General general){
+    //Funcion del fichero binario Base, la lectura se hace de un struct de golpe.
     FILE * fp = fopen(argv, "r");
     if (fp == NULL) {
         printf("Error: Fichero inexistente.\n\n");
         exit(0);
     }
     fread(&general.base, sizeof(Base), 1, fp);
-    printf("WHAT THE FUCK 4\n");
     fclose(fp);
     return general;
 }

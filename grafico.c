@@ -5,6 +5,7 @@
 #include "grafico.h"
 
 void pintaConfig(General general, Coche * coche, int x, int y, ALLEGRO_BITMAP * boxes, ALLEGRO_BITMAP * neumaticos, ALLEGRO_BITMAP * cotxe, ALLEGRO_BITMAP * gasolina, ALLEGRO_BITMAP * motor){
+    //Funcion que se encarga de pintar tod0 el apartado grafico de la libreria allegro para que se le pueda llamar en cualquier momento.
     float z = 0;
     al_draw_scaled_bitmap(boxes, 0,0,al_get_bitmap_width(boxes),al_get_bitmap_height(boxes),0,0,600,550,0);
     if (y == 0){
@@ -39,6 +40,11 @@ void pintaConfig(General general, Coche * coche, int x, int y, ALLEGRO_BITMAP * 
 }
 
 void dibujaPanelConfiguracion(General general, Coche * coche){
+    //Funcion del apartado grafico de configuracio del coche el cual te llenara el struct de piezas que tiene dependiendo de las que escoja el usuario
+    //medienta las flechas de teclado gracias a la variable eje Y que guardara la categoria en la que estemos y el array de variables X que guardara
+    //la pieza que el usuario se haya quedado en el la categoria que estuviera (x[y]), antes de eso se da el espacio al struct de piezas y se cargan
+    //las imagenes las quales son variables ALLEGRO_BITMAP, cada cambio de ejes X e Y se ejecutara la funcion de pintar para actualizar los datos con
+    //los ejes cmbiados, al final de tod0 se destruiran las variables de las imagenes para liberar la memoria.
     int nSortir = 0, x[general.numCategorias], y = 0;
     for (int i = 0; i < general.numCategorias; ++i) {
         x[i] = 0;

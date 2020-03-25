@@ -4,13 +4,14 @@
 #include "lista.h"
 
 void sortedInsert(struct _node** head_ref, struct _node* new_node){
+    //Funcion que inserta un nuevo nodo en la lista ordenada, se comprueba si el nodo es el primero de la lista o es menor o igual al primer nodo que
+    //pueda haber, y se inserta como primer nodo de la lista, si no lo es entonces va nodo a nodo hasta encontrar el nodo el cual sea mas pequeño que
+    //el nuevo o el final de la lista y entonces se inserta ahi.
     struct _node * current;
-    /* Special case for the head end */
     if (*head_ref == NULL || (*head_ref)->posCalndario >= new_node->posCalndario){
         new_node->next = *head_ref;
         *head_ref = new_node;
     } else {
-        /* Locate the node before the point of insertion */
         current = *head_ref;
         while (current->next!=NULL && current->next->posCalndario < new_node->posCalndario) {
             current = current->next;
@@ -21,9 +22,9 @@ void sortedInsert(struct _node** head_ref, struct _node* new_node){
 }
 
 struct _node *newNode(GP gp){
-    /* allocate node */
+    //Funcion de creacion de un nuevo nodo, se le pasa por parametro un nodo estatico normal y te lo devuelve como un nodo dinamico preparado para ser
+    //insertado en una lista.
     struct _node* new_node = (struct _node*) malloc(sizeof(struct _node));
-    /* put in the data  */
     new_node->posCalndario  = gp.posCalndario;
     strcpy(new_node->nombreGP,gp.nombreGP);
     new_node->velocidadAdec  = gp.velocidadAdec;

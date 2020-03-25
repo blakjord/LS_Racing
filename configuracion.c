@@ -5,14 +5,13 @@
 #include "configuracion.h"
 
 int configurarCoche(General general, Coche * coche){
+    //Funcion de la opcion 1 del menu principal llamada configurar coche, la cual se encarga de llenarte el struct coche que se le pasa por referencia,
+    //al usuario le iran preguntando por las variables que ha de rellenar, despues llamara a la funcion que llenara las piezas del coche.
     printf("Nombre del piloto? ");
-    //fflush(stdin);
+    fflush(stdin);
     fgets(coche->corredor.nombreCorredor, 25, stdin);
-    //scanf("%25[^\n]s",coche->corredor.nombreCorredor);
-
     printf("Nombre de la escuderia? ");
     fgets(coche->corredor.escuderia, 25, stdin);
-    //scanf("%25[^\n]s",coche->corredor.escuderia);
     do{
         printf("Dorsal? ");
         scanf("%d",&coche->corredor.dorsal);

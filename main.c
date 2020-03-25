@@ -7,6 +7,9 @@
 #include "clasificacion.h"
 
 int main(int argc, char *argv[]){
+    //Procedimiento principal, primero comprueba si los parametros que le has pasado son correctos, luego ejecuta la funcion de lectura de los archivos,
+    //Y por ultimo te crea el menu que te dirigira a la funcion que el usuario diga, ya sea la de congifurar el coche, la de empezar la carrera, la de
+    //ver la clasificacion y la de guardar la temporada.
     if (argc != 5){
         printf("Parametros incorrectos");
         exit(-1);
