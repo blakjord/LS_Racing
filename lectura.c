@@ -1,11 +1,23 @@
-//
-// Alejandro Viana Labà - Blai Jordan Borobia | Logins: alejandro.viana - blai.jordan
-//
+/***********************************************
+*
+* @Proposito: Almacena las funciones de la lectura de ficheros.
+* @Autor/s: Alejandro Viana Labà - Blai Jordan Borobia | Logins: alejandro.viana - blai.jordan
+* @Fecha creacion: 3/3/20
+* @Fecha ultima modificacion: 26/04/2020
+*
+************************************************/
+
 #include "lectura.h"
 
+/***********************************************
+*
+* @Finalidad: Funcion general de la lectura de los ficheros la cual crea el struct "general" que sera el que devolvera la funcion, y llama a todas las funciones
+*             de lectura de cada archivo para llenar el struct y devolverlo.
+* @Parametros:  in: argc = Matriz donde se guardan todos los argumentos del programa.
+* @Retorno: Devuelve un strcuct General con toda la informacion de todos los ficheros.
+*
+************************************************/
 General lecturaFicheros(char * argv[]){
-    //Funcion general de la lectura de los ficheros la cual crea el struct "general" que sera el que devolvera la funcion, y llama a todas las funciones
-    //de lectura de cada archivo para llenar el struct y devolverlo.
     General general;
     general = lecturaPiezas(argv[1], general);
     general = lecturaGPs(argv[2], general);
@@ -14,9 +26,16 @@ General lecturaFicheros(char * argv[]){
     return general;
 }
 
+/***********************************************
+*
+* @Finalidad: Funcion de lectura del fichero txt de piezas, la lectura se hace linea a linea leyendo cada pieza el numero de veces que se indica al pricipio,
+              se almacena tod0 en un struct Categoria dandole espacio de forma dinamica.
+* @Parametros:  in: argv = String del nombre del fichero que se va a leer.
+*               in: general = Struct con informacion de los ficheros.
+* @Retorno: Devuelve un strcuct General con toda la informacion del fichero.
+*
+************************************************/
 General lecturaPiezas(char * argv, General general) {
-    //Funcion de lectura del fichero txt de piezas, la lectura se hace linea a linea leyendo cada pieza el numero de veces que se indica al pricipio,
-    //se almacena tod0 en un struct Categoria dandole espacio de forma dinamica.
     char cadena[50], aux = ' ';
     FILE * fp = fopen(argv, "r");
     if (fp == NULL) {
@@ -57,9 +76,16 @@ General lecturaPiezas(char * argv, General general) {
     return general;
 }
 
+/***********************************************
+*
+* @Finalidad: Funcion de lectura del fichero txt de Grandes Premios, la lectura se hace linea a linea leyendo cada gran premio el numero de veces que se indica
+*           al pricipio, se almacena tod0 en una lista ordenada creando un nuevo nodo a cada gran premio y insertandolo a la lista de menos posCalendario a mas.
+* @Parametros:  in: argv = String del nombre del fichero que se va a leer.
+*               in: general = Struct con informacion de los ficheros.
+* @Retorno: Devuelve un strcuct General con toda la informacion del fichero.
+*
+************************************************/
 General lecturaGPs(char * argv, General general){
-    //Funcion de lectura del fichero txt de Grandes Premios, la lectura se hace linea a linea leyendo cada gran premio el numero de veces que se indica
-    // al pricipio, se almacena tod0 en una lista ordenada creando un nuevo nodo a cada gran premio y insertandolo a la lista de menos posCalendario a mas.
     char cadena[50], aux = ' ';
     GP gpaux;
     general.listaGP = NULL;
@@ -94,9 +120,16 @@ General lecturaGPs(char * argv, General general){
     return general;
 }
 
+/***********************************************
+*
+* @Finalidad: Funcion del fichero binario de corredores, la lectura se hace struct a struct, como se asegura que siempre habra 7 pilotos reservamos directamente
+*             el espacio para los 7.
+* @Parametros:  in: argv = String del nombre del fichero que se va a leer.
+*               in: general = Struct con informacion de los ficheros.
+* @Retorno: Devuelve un strcuct General con toda la informacion del fichero.
+*
+************************************************/
 General lecturaCorredores(char * argv, General general){
-    //Funcion del fichero binario de corredores, la lectura se hace struct a struct, como se asegura que siempre habra 7 pilotos reservamos directamente
-    //el espacio para los 7.
     FILE * fp = fopen(argv, "r");
     if (fp == NULL) {
         printf("Error: Fichero inexistente.\n\n");
@@ -110,8 +143,15 @@ General lecturaCorredores(char * argv, General general){
     return general;
 }
 
+/***********************************************
+*
+* @Finalidad: Funcion del fichero binario Base, la lectura se hace de un struct de golpe.
+* @Parametros:  in: argv = String del nombre del fichero que se va a leer.
+*               in: general = Struct con informacion de los ficheros.
+* @Retorno: Devuelve un strcuct General con toda la informacion del fichero.
+*
+************************************************/
 General lecturaBase(char * argv, General general){
-    //Funcion del fichero binario Base, la lectura se hace de un struct de golpe.
     FILE * fp = fopen(argv, "r");
     if (fp == NULL) {
         printf("Error: Fichero inexistente.\n\n");

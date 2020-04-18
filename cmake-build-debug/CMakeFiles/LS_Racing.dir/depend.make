@@ -4,8 +4,11 @@
 CMakeFiles/LS_Racing.dir/LS_allegro.c.obj: ../LS_allegro.c
 CMakeFiles/LS_Racing.dir/LS_allegro.c.obj: ../LS_allegro.h
 
+CMakeFiles/LS_Racing.dir/carrera.c.obj: ../LS_allegro.h
 CMakeFiles/LS_Racing.dir/carrera.c.obj: ../carrera.c
 CMakeFiles/LS_Racing.dir/carrera.c.obj: ../carrera.h
+CMakeFiles/LS_Racing.dir/carrera.c.obj: ../grafico.h
+CMakeFiles/LS_Racing.dir/carrera.c.obj: ../tipos.h
 
 CMakeFiles/LS_Racing.dir/clasificacion.c.obj: ../clasificacion.c
 CMakeFiles/LS_Racing.dir/clasificacion.c.obj: ../clasificacion.h

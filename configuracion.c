@@ -1,12 +1,24 @@
-//
-// Alejandro Viana Labà - Blai Jordan Borobia | Logins: alejandro.viana - blai.jordan
-//
+/***********************************************
+*
+* @Proposito: Almacena las funciones sobre la configuracion de nuestro piloto.
+* @Autor/s: Alejandro Viana Labà - Blai Jordan Borobia | Logins: alejandro.viana - blai.jordan
+* @Fecha creacion: 3/3/20
+* @Fecha ultima modificacion: 26/04/2020
+*
+************************************************/
 
 #include "configuracion.h"
 
-int configurarCoche(General general, Coche * coche){
-    //Funcion de la opcion 1 del menu principal llamada configurar coche, la cual se encarga de llenarte el struct coche que se le pasa por referencia,
-    //al usuario le iran preguntando por las variables que ha de rellenar, despues llamara a la funcion que llenara las piezas del coche.
+/***********************************************
+*
+* @Finalidad: Funcion de la opcion 1 del menu principal llamada configurar coche, la cual se encarga de llenarte el struct coche que se le pasa por referencia,
+*             al usuario le iran preguntando por las variables que ha de rellenar, despues llamara a la funcion que llenara las piezas del coche.
+* @Parametros:  in: general = Struct con informacion de los ficheros.
+*               in: coche = Struct con informacion del piloto del usuario.
+* @Retorno: No devuelve nada.
+*
+************************************************/
+void configurarCoche(General general, Coche * coche){
     printf("Nombre del piloto? ");
     fflush(stdin);
     fgets(coche->corredor.nombreCorredor, 25, stdin);
@@ -49,5 +61,4 @@ int configurarCoche(General general, Coche * coche){
     } while (coche->corredor.gestNeumaticos < 0 || coche->corredor.gestNeumaticos > 10);
     printf("\n\nCargando configurador ...\n");
     dibujaPanelConfiguracion(general,coche);
-    return 1;
 }

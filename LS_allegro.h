@@ -1,6 +1,12 @@
-//
-// Alejandro Viana Labà - Blai Jordan Borobia | Logins: alejandro.viana - blai.jordan
-//
+/***********************************************
+*
+* @Proposito: Almacena las funciones de las funciones relacionadas con TADs
+* @Autor/s: Alejandro Viana Labà - Blai Jordan Borobia | Logins: alejandro.viana - blai.jordan
+* @Fecha creacion: 3/3/20
+* @Fecha ultima modificacion: 26/04/2020
+*
+************************************************/
+
 /*
     Mòdul de simplificació i adaptació de l'API de la llibreria
     Allegro 5 per al desenvolupament senzill de jocs 2D a l'assignatura

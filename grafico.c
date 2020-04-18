@@ -1,11 +1,30 @@
-//
-// Alejandro Viana Labà - Blai Jordan Borobia | Logins: alejandro.viana - blai.jordan
-//
+/***********************************************
+*
+* @Proposito: Almacena las funciones sobre el apartado grafico de la configuracion de nuestro piloto.
+* @Autor/s: Alejandro Viana Labà - Blai Jordan Borobia | Logins: alejandro.viana - blai.jordan
+* @Fecha creacion: 3/3/20
+* @Fecha ultima modificacion: 26/04/2020
+*
+************************************************/
 
 #include "grafico.h"
 
+/***********************************************
+*
+* @Finalidad: Funcion que se encarga de pintar tod0 el apartado grafico de la libreria allegro para que se le pueda llamar en cualquier momento.
+* @Parametros:  in: general = Struct con informacion de los ficheros.
+*               in: coche = Struct con informacion del piloto del usuario.
+*               in: x = numero que corresponde a la pieza de la categoria actual
+*               in: y = numero que corresponde a la categoria de piezas actual.
+*               in: boxes = imagen de los boxes
+*               in: neumaticos = imagen de unos neumaticos.
+*               in: coche = imagen del coche.
+*               in: gasolina = imagen de la manguera de la gasolina.
+*               in: motor = imagen del motor.
+* @Retorno: No devuelve nada.
+*
+************************************************/
 void pintaConfig(General general, Coche * coche, int x, int y, ALLEGRO_BITMAP * boxes, ALLEGRO_BITMAP * neumaticos, ALLEGRO_BITMAP * cotxe, ALLEGRO_BITMAP * gasolina, ALLEGRO_BITMAP * motor){
-    //Funcion que se encarga de pintar tod0 el apartado grafico de la libreria allegro para que se le pueda llamar en cualquier momento.
     float z = 0;
     al_draw_scaled_bitmap(boxes, 0,0,al_get_bitmap_width(boxes),al_get_bitmap_height(boxes),0,0,600,550,0);
     if (y == 0){
@@ -29,7 +48,7 @@ void pintaConfig(General general, Coche * coche, int x, int y, ALLEGRO_BITMAP * 
     al_draw_textf(LS_allegro_get_font(SMALL),LS_allegro_get_color(WHITE),770,100,0,"%s", general.categoria[y].pieza[x].nombrePieza);
     al_draw_textf(LS_allegro_get_font(SMALL),LS_allegro_get_color(WHITE),770,120,0,"VELOCIDAD: %d", general.categoria[y].pieza[x].velocidad);
     al_draw_textf(LS_allegro_get_font(SMALL),LS_allegro_get_color(WHITE),770,140,0,"ACELERACION: %d", general.categoria[y].pieza[x].aceleracion);
-    al_draw_textf(LS_allegro_get_font(SMALL),LS_allegro_get_color(WHITE),770,160,0,"CONSUM: %d", general.categoria[y].pieza[x].consumo);
+    al_draw_textf(LS_allegro_get_font(SMALL),LS_allegro_get_color(WHITE),770,160,0,"CONSUMO: %d", general.categoria[y].pieza[x].consumo);
     al_draw_textf(LS_allegro_get_font(SMALL),LS_allegro_get_color(WHITE),770,180,0,"FIABILIDAD: %d", general.categoria[y].pieza[x].fiabilidad);
     al_draw_textf(LS_allegro_get_font(NORMAL),LS_allegro_get_color(WHITE),620,300,0,"CONFIGURACION ACTUAL");
     for (int i = 0; i < general.numCategorias; ++i) {
@@ -39,19 +58,26 @@ void pintaConfig(General general, Coche * coche, int x, int y, ALLEGRO_BITMAP * 
     LS_allegro_clear_and_paint(BLACK);
 }
 
+/***********************************************
+*
+* @Finalidad:   Funcion del apartado grafico de configuracio del coche el cual te llenara el struct de piezas que tiene dependiendo de las que escoja el usuario
+*               medienta las flechas de teclado gracias a la variable eje Y que guardara la categoria en la que estemos y el array de variables X que guardara
+*               la pieza que el usuario se haya quedado en el la categoria que estuviera (x[y]), antes de eso se da el espacio al struct de piezas y se cargan
+*               las imagenes las quales son variables ALLEGRO_BITMAP, cada cambio de ejes X e Y se ejecutara la funcion de pintar para actualizar los datos con
+*               los ejes cmbiados, al final de tod0 se destruiran las variables de las imagenes para liberar la memoria.
+* @Parametros:  in: general = Struct con informacion de los ficheros.
+*               in: coche = Struct con informacion del piloto del usuario.
+* @Retorno: No devuelve nada.
+*
+************************************************/
 void dibujaPanelConfiguracion(General general, Coche * coche){
-    //Funcion del apartado grafico de configuracio del coche el cual te llenara el struct de piezas que tiene dependiendo de las que escoja el usuario
-    //medienta las flechas de teclado gracias a la variable eje Y que guardara la categoria en la que estemos y el array de variables X que guardara
-    //la pieza que el usuario se haya quedado en el la categoria que estuviera (x[y]), antes de eso se da el espacio al struct de piezas y se cargan
-    //las imagenes las quales son variables ALLEGRO_BITMAP, cada cambio de ejes X e Y se ejecutara la funcion de pintar para actualizar los datos con
-    //los ejes cmbiados, al final de tod0 se destruiran las variables de las imagenes para liberar la memoria.
     int nSortir = 0, x[general.numCategorias], y = 0;
     for (int i = 0; i < general.numCategorias; ++i) {
         x[i] = 0;
     }
     coche->pieza = (Pieza*)malloc(sizeof(Pieza)*(general.numCategorias));
-    //Inicialitzem Allegro
-    LS_allegro_init(anchoPantalla,altoPantalla,"Tonto quien lo lea");
+    //Inicializamos Allegro
+    LS_allegro_init(anchoPantalla,altoPantalla,"Configuración Pantalla");
     ALLEGRO_BITMAP * boxes = NULL;
     boxes = al_load_bitmap("boxes.png");
     ALLEGRO_BITMAP * cotxe = NULL;
@@ -64,7 +90,6 @@ void dibujaPanelConfiguracion(General general, Coche * coche){
     neumaticos = al_load_bitmap("neumaticos.png");
     pintaConfig(general,coche,x[y],y,boxes,neumaticos,cotxe,gasolina,motor);
     while(!nSortir){
-        //Escoltem el teclat esperant la tecla ESC
         if(LS_allegro_key_pressed(ALLEGRO_KEY_UP)){
             if(y > 0){
                 y--;
@@ -100,7 +125,6 @@ void dibujaPanelConfiguracion(General general, Coche * coche){
         if(LS_allegro_key_pressed(ALLEGRO_KEY_ESCAPE)){
             nSortir = 1;
         }
-        //Donem l'ordre d'escriure el text de benvinguda
         coche->pieza[y] = general.categoria[y].pieza[x[y]];
     }
     for (int j = 0; j < general.numCategorias; ++j) {

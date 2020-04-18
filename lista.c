@@ -1,12 +1,25 @@
-//
-// Alejandro Viana Labà - Blai Jordan Borobia | Logins: alejandro.viana - blai.jordan
-//
+/***********************************************
+*
+* @Proposito: Almacena las funciones relacionadas con TADs.
+* @Autor/s: Alejandro Viana Labà - Blai Jordan Borobia | Logins: alejandro.viana - blai.jordan
+* @Fecha creacion: 3/3/20
+* @Fecha ultima modificacion: 26/04/2020
+*
+************************************************/
+
 #include "lista.h"
 
+/***********************************************
+*
+* @Finalidad: Funcion que inserta un nuevo nodo en la lista ordenada, se comprueba si el nodo es el primero de la lista o es menor o igual al primer nodo que
+*             pueda haber, y se inserta como primer nodo de la lista, si no lo es entonces va nodo a nodo hasta encontrar el nodo el cual sea mas pequeño que
+*             el nuevo o el final de la lista y entonces se inserta ahi.
+* @Parametros:  in: head_ref = Lista de nodos de los grandes premios.
+*               in: _node = Nodo nuevo generado que insertaremos.
+* @Retorno: No devuelve nada.
+*
+************************************************/
 void sortedInsert(struct _node** head_ref, struct _node* new_node){
-    //Funcion que inserta un nuevo nodo en la lista ordenada, se comprueba si el nodo es el primero de la lista o es menor o igual al primer nodo que
-    //pueda haber, y se inserta como primer nodo de la lista, si no lo es entonces va nodo a nodo hasta encontrar el nodo el cual sea mas pequeño que
-    //el nuevo o el final de la lista y entonces se inserta ahi.
     struct _node * current;
     if (*head_ref == NULL || (*head_ref)->posCalndario >= new_node->posCalndario){
         new_node->next = *head_ref;
@@ -21,9 +34,15 @@ void sortedInsert(struct _node** head_ref, struct _node* new_node){
     }
 }
 
+/***********************************************
+*
+* @Finalidad: Funcion de creacion de un nuevo nodo, se le pasa por parametro un nodo estatico normal y te lo devuelve como un nodo dinamico preparado para ser
+*             insertado en una lista.
+* @Parametros:  in: gp = Struct donde esta la informacion que cargara el nuevo nodo.
+* @Retorno: Devuelve el nuevo nodo creado.
+*
+************************************************/
 struct _node *newNode(GP gp){
-    //Funcion de creacion de un nuevo nodo, se le pasa por parametro un nodo estatico normal y te lo devuelve como un nodo dinamico preparado para ser
-    //insertado en una lista.
     struct _node* new_node = (struct _node*) malloc(sizeof(struct _node));
     new_node->posCalndario  = gp.posCalndario;
     strcpy(new_node->nombreGP,gp.nombreGP);

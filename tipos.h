@@ -1,13 +1,23 @@
-//
-// Alejandro Viana Labà - Blai Jordan Borobia | Logins: alejandro.viana - blai.jordan
-//
+/***********************************************
+*
+* @Proposito: Almacena todos los tipos y constantes
+* @Autor/s: Alejandro Viana Labà - Blai Jordan Borobia | Logins: alejandro.viana - blai.jordan
+* @Fecha creacion: 3/3/20
+* @Fecha ultima modificacion: 26/04/2020
+*
+************************************************/
 
 #ifndef LS_RACING_TIPOS_H
 #define LS_RACING_TIPOS_H
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+
 #include "LS_allegro.h"
+
+#define anchoPantalla 900
+#define altoPantalla 550
 #define MAXC 25
 
 typedef struct {
