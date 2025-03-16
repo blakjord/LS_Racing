@@ -15,10 +15,17 @@
 #include <string.h>
 
 #include "LS_allegro.h"
+#include <allegro5/allegro_audio.h>
+#include <allegro5/allegro_acodec.h>
 
 #define anchoPantalla 900
 #define altoPantalla 550
-#define MAXC 25
+#define MAXC 26
+#define MAXPilotos 8
+#define vel "VELOCIDAD"
+#define acel "ACELERACION"
+#define cons "CONSUMO"
+#define fiab "FIABILIDAD"
 
 typedef struct {
     char nombrePieza[MAXC];

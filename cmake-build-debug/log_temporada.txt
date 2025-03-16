@@ -1,0 +1,36 @@
+Clasificacion del GP Australia
+0. Alejandro Viana amb 26 segons. Punts: 25
+1. Guillem Guerrero amb 47 segons. Punts: 18
+2. Disque pa matar amb 52 segons. Punts: 15
+3. La tusa amb 60 segons. Punts: 10
+4. Excusa amb 61 segons. Punts: 8
+5. Con su amiga amb 62 segons. Punts: 6
+6. Hoy salio amb 63 segons. Punts: 5
+7. Ya no tiene amb 66 segons. Punts: 3
+Clasificacion del GP Austria
+0. Alejandro Viana amb 34 segons. Punts: 50
+1. Guillem Guerrero amb 52 segons. Punts: 36
+2. Disque pa matar amb 58 segons. Punts: 30
+3. La tusa amb 65 segons. Punts: 20
+4. Excusa amb 66 segons. Punts: 16
+5. Con su amiga amb 67 segons. Punts: 12
+6. Hoy salio amb 68 segons. Punts: 10
+7. Ya no tiene amb 71 segons. Punts: 6
+Clasificacion del GP Italia
+0. Alejandro Viana amb 51 segons. Punts: 75
+1. Guillem Guerrero amb 70 segons. Punts: 54
+2. Disque pa matar amb 75 segons. Punts: 45
+3. La tusa amb 82 segons. Punts: 30
+4. Excusa amb 83 segons. Punts: 24
+5. Con su amiga amb 85 segons. Punts: 18
+6. Hoy salio amb 86 segons. Punts: 15
+7. Ya no tiene amb 88 segons. Punts: 9
+Clasificacion del GP Mexico
+0. Alejandro Viana amb 64 segons. Punts: 100
+1. Guillem Guerrero amb 81 segons. Punts: 72
+2. Disque pa matar amb 86 segons. Punts: 60
+3. La tusa amb 94 segons. Punts: 40
+4. Excusa amb 94 segons. Punts: 32
+5. Con su amiga amb 96 segons. Punts: 24
+6. Hoy salio amb 97 segons. Punts: 20
+7. Ya no tiene amb 100 segons. Punts: 12

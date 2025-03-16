@@ -12,6 +12,7 @@
 #include "lista.h"
 
 General lecturaFicheros(char *argv[]);
+void comprobarFicharo(FILE * fp);
 General lecturaPiezas(char *argv, General general);
 General lecturaGPs(char *argv, General general);
 General lecturaCorredores(char *argv, General general);

@@ -10,9 +10,13 @@
 #ifndef LS_RACING_GRAFICO_H
 #define LS_RACING_GRAFICO_H
 
-#include "tipos.h"
+#include "lista.h"
 
-void dibujaPanelConfiguracion(General general, Coche * coche);
 void pintaConfig(General general, Coche * coche, int x, int y, ALLEGRO_BITMAP * boxes, ALLEGRO_BITMAP * neumaticos, ALLEGRO_BITMAP * cotxe, ALLEGRO_BITMAP * gasolina, ALLEGRO_BITMAP * motor);
+void pintarCarrera(General general, Coche coche, int numStops, int stopsDone, ALLEGRO_BITMAP * cotxe, ALLEGRO_BITMAP * logo, float tiempo, float tiempoP, const float * tiempoTotal);
+void pintarPantallaInicio(struct _node circuito);
+void pintarPantallaFinal(int posicion , char * nombre, int penalizacion);
+void pintarClasificacion(Clasificacion clasificacion, ALLEGRO_BITMAP * logo);
+void pintarClasificacionFinal(Clasificacion clasificacion, ALLEGRO_BITMAP * logo);
 
 #endif //LS_RACING_GRAFICO_H

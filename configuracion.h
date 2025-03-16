@@ -13,7 +13,7 @@
 #include "tipos.h"
 #include "grafico.h"
 
-
 void configurarCoche(General general, Coche * coche);
+void PanelConfiguracion(General general, Coche * coche);
 
 #endif //LS_RACING_CONFIGURACION_H
